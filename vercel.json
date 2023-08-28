@@ -1,0 +1,13 @@
+{
+    "builds": [{
+        "src": "Bird/wsgi.py",
+        "use": "@vercel/python",
+        "config": {"maxlambdaSize":"15mb", "runtime": "python3.10"}
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest":"Bird/wsgi.py"
+        }
+    ]
+}
